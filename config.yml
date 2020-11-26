@@ -33,28 +33,28 @@ steps:
 # Step 2: EDIT HERE -INTERNAL COMMENT FOR STEP 2
 # - title: Headers
 #  description: headers are created with '#' symbols, one hash is header 1, 2 is header 2 etc...
-#  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+#  event: push
 #  actions: # a list of the actions that will occur when the step is triggered by an event
 #  - type: # the type of action, full list at https://lab.github.com/docs/actions
 
 # Step 3: EDIT HERE - INTERNAL COMMENT FOR STEP 3
 # - title: Lists
 #  description: ordered lists with 1. and unordered with * 
-#  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+#  event: push
 #  actions: # a list of the actions that will occur when the step is triggered by an event
 #  - type: # the type of action, full list at https://lab.github.com/docs/actions
 
 # Step 4: EDIT HERE - INTERNAL COMMENT FOR STEP 4
 # - title: Links
 #  description: [link](www.website.com)
-#  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+#  event: push
 #  actions: # a list of the actions that will occur when the step is triggered by an event
 #  - type: # the type of action, full list at https://lab.github.com/docs/actions
 
 # Step 5: EDIT HERE - INTERNAL COMMENT FOR STEP 5
 # - title: Images
 #  description: Follow above steps without []
-#  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+#  event: push
 #  actions: # a list of the actions that will occur when the step is triggered by an event
 #  - type: # the type of action, full list at https://lab.github.com/docs/actions
 
