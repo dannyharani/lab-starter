@@ -1,6 +1,6 @@
-title: # a name for your Learning Lab course
-tagline: # a short description for your Learning Lab course, displayed on the course catalog
-description: # a longer description for your Learning Lab course, displayed on the course's landing page
+title: a name for your Learning Lab course
+tagline: # short description for your Learning Lab course, displayed on the course catalog
+description: a longer description for your Learning Lab course, displayed on the course's landing page
 
 # Repository setup
 # The following section template information for the repository
@@ -14,9 +14,8 @@ template:
 # Actions to take place after the learner registers, but before they start interacting with their repo
 
 before:
-- type: # the type of action, full list at https://lab.github.com/docs/actions/
-  # some actions require additional options, those should appear below `type:`
-  # you can execute multiple actions in the `before` block
+- type: respond
+  with: 01_first-response.md
 
 # Steps for the course
 # A list of steps that take the learner through the course
@@ -24,37 +23,46 @@ before:
 
 steps:
 # Step 1: EDIT HERE - INTERNAL COMMENT DESCRIBING STEP 
-- title: # What is markdown
-  description: # Markdown is a markup language
-  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+- title: What is markdown
+  description: Markdown is a markup language
+  event: push
   actions: # a list of the actions that will occur when the step is triggered by an event
-  - type: # the type of action, full list at https://lab.github.com/docs/actions
-
+  - type: gate
+    left: '%payload.pull_request.title%'
+    operator: ===
+    right: add name to README
+    else:
+      - type: respond
+        with: 01_try-again.md
+   
+  - type: respond
+    with: 01_nice-work.md
+    
 # Step 2: EDIT HERE -INTERNAL COMMENT FOR STEP 2
-# - title: # Headers
-#  description: # headers are created with '#' symbols, one hash is header 1, 2 is header 2 etc...
-#  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+# - title: Headers
+#  description: headers are created with '#' symbols, one hash is header 1, 2 is header 2 etc...
+#  event: push
 #  actions: # a list of the actions that will occur when the step is triggered by an event
 #  - type: # the type of action, full list at https://lab.github.com/docs/actions
 
 # Step 3: EDIT HERE - INTERNAL COMMENT FOR STEP 3
-# - title: # Lists
-#  description: # ordered lists with 1. and unordered with * 
-#  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+# - title: Lists
+#  description: ordered lists with 1. and unordered with * 
+#  event: push
 #  actions: # a list of the actions that will occur when the step is triggered by an event
 #  - type: # the type of action, full list at https://lab.github.com/docs/actions
 
 # Step 4: EDIT HERE - INTERNAL COMMENT FOR STEP 4
-# - title: # Links
-#  description: # [link](www.website.com)
-#  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+# - title: Links
+#  description: [link](www.website.com)
+#  event: push
 #  actions: # a list of the actions that will occur when the step is triggered by an event
 #  - type: # the type of action, full list at https://lab.github.com/docs/actions
 
 # Step 5: EDIT HERE - INTERNAL COMMENT FOR STEP 5
-# - title: # Images
-#  description: # Follow above steps without []
-#  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+# - title: Images
+#  description: Follow above steps without []
+#  event: push
 #  actions: # a list of the actions that will occur when the step is triggered by an event
 #  - type: # the type of action, full list at https://lab.github.com/docs/actions
 
