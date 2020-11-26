@@ -1,20 +1,20 @@
 # Title
 
-This is the paragraph to would describe the concept. It may link to other resources, or include images. Try to avoid _too_ much information and _too_ many external links. The purpose of these paragraphs is to give the user the information they need to complete the activity, understand what they're doing, and understand why they're doing it.
+A header is a bigger paragraph to grab a readers attention, for example, Title above is a header 1
 
-### More detail 
+### Hashes
 
-If there are concepts that should be described separately, they might belong in a subparagraph section like this one.
+create a header using #, one would make a header one, six would make a header six. Usually one through 4 are the most common.
 
-## Step X: Description
+## Step 1: Description
 
-Here, we'll describe generally what the user is about to do.
+You will create some headers
 
 ### :keyboard: Activity: Specific description
 
-1. Step 1 in short sentence
-2. Step 2 in short sentence
-3. Step 3 in short sentence
+1. Edit the README.md file
+2. Add a header using hashes
+3. commit this file to the main branch
 
 <hr>
 <h3 align="center">Watch below this comment for my response</h3>
